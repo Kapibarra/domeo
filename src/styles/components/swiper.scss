@@ -85,14 +85,15 @@ swiper-slide {
 
     & swiper-slide {
       transition: all 0.35s ease, transform 0.3s ease;
-      transform: scale(0.8);
+      transform: scale(1) !important;
       transform-origin: center;
+      opacity: 0.4;
     }
     & .swiper-slide-active {
       transition: opacity 0.3s ease, transform 0.3s ease;
       width: 138px !important;
       transform-origin: center;
-      transform: scale(1);
+      transform: scale(1) !important;
     }
   }
 }

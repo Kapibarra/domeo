@@ -4301,7 +4301,6 @@
         loop: true,
         cssMode: false,
         centeredSlides: true,
-        spaceBetween: 30,
         noSwipingClass: "slider__thumb-wrapper",
         allowTouchMove: false,
         breakpoints: {
@@ -4309,7 +4308,7 @@
             slidesPerView: 3,
           },
           375: {
-            slidesPerView: 3.5,
+            slidesPerView: 4,
             centeredSlides: true,
             spaceBetween: 8,
           },
@@ -4327,7 +4326,7 @@
       swiperEl.initialize();
       function checkResolutionAndSlide() {
         if (window.innerWidth >= 320) {
-          swiperEl.swiper.slideTo(2);
+          swiperEl.swiper.slideTo(3);
         }
         if (window.innerWidth >= 767) {
           swiperEl.swiper.slideTo(3);
