@@ -71,6 +71,7 @@
     padding: 32px 136px;
     @media screen and (max-width: 767px) {
       padding: 32px 27.5px;
+      padding-bottom: 42px;
     }
   }
   /*slider*/
@@ -93,7 +94,9 @@
     margin-top: 32px;
     margin-bottom: 24px;
     @media screen and (max-width: 767px) {
-      width: 265px;
+      width: 280px;
+      margin-top: 0px;
+      margin-bottom: 30px;
     }
   }
   .slider__subtitle {
@@ -106,6 +109,9 @@
     text-transform: uppercase;
     margin-top: 30px;
     margin-bottom: 15px;
+    @media screen and (max-width: 767px) {
+      margin-top: 25px;
+    }
   }
   .slider-wrapper {
     display: flex;
@@ -124,12 +130,15 @@
     @media screen and (max-width: 767px) {
       width: 280px;
       min-width: unset;
-      height: 75px;
+      height: 83px;
       object-fit: cover;
     }
     & img {
       @media screen and (max-width: 767px) {
         max-width: 280px;
+        height: 83px;
+        border-radius: 6px;
+        object-fit: cover;
       }
     }
   }
@@ -155,7 +164,7 @@
       background: rgb(137, 74, 167);
     }
     @media screen and (max-width: 767px) {
-      top: 176px;
+      top: 151px;
     }
   }
 
@@ -182,6 +191,7 @@
     gap: 11px;
     @media screen and (max-width: 767px) {
       gap: 6px;
+      row-gap: 32px;
     }
   }
 
@@ -242,7 +252,7 @@
   font-family: "Commissioner";
   @media screen and (max-width: 767px) {
     font-size: 9px;
-    min-width: 90px;
+    min-width: fit-content;
     padding: 1px 2px;
   }
   & .bold {
@@ -261,8 +271,9 @@
   font-size: 14.2px;
 
   @media screen and (max-width: 767px) {
-    top: 23px;
-    left: 27px;
+    top: 26px;
+    left: 16px;
+    font-size: 8.71px;
   }
 }
 .counter-position-2 {
@@ -274,10 +285,14 @@
   & span {
     font-size: 8.02px;
     line-height: 10.83px;
+    @media screen and (max-width: 767px) {
+      font-size: 6.75px;
+    }
   }
   @media screen and (max-width: 767px) {
-    top: 8px;
-    left: 134px;
+    top: 10px;
+    left: 136px;
+    font-size: 6.75px;
   }
 }
 .counter-position-3 {
@@ -286,8 +301,9 @@
   position: absolute;
   font-size: 13.62px;
   @media screen and (max-width: 767px) {
-    top: 42px;
-    left: 73px;
+    top: 46px;
+    left: 67px;
+    font-size: 8.5px;
   }
 }
 .counter-position-4 {
@@ -297,8 +313,9 @@
   font-weight: 500;
   font-size: 9.61px;
   @media screen and (max-width: 767px) {
-    top: 51px;
-    left: 87px;
+    top: 59px;
+    left: 86px;
+    font-size: 5.8px;
   }
 }
 .counter-position-5 {
@@ -308,8 +325,9 @@
   font-size: 8.33px;
   letter-spacing: -0.4px;
   @media screen and (max-width: 767px) {
-    top: 22px;
-    left: 95px;
+    top: 26px;
+    left: 96px;
+    font-size: 5.2px;
   }
 }
 .counter-position-6 {
@@ -318,8 +336,9 @@
   font-size: 11.22px;
   position: absolute;
   @media screen and (max-width: 767px) {
-    top: 32px;
-    left: 66px;
+    top: 36px;
+    left: 60px;
+    font-size: 7px;
   }
 }
 .counter-position-7 {
@@ -329,7 +348,8 @@
   font-size: 10.42px;
   letter-spacing: -0.1px;
   @media screen and (max-width: 767px) {
-    top: 57px;
-    left: 50px;
+    top: 66px;
+    left: 42px;
+    font-size: 6.5px;
   }
 }

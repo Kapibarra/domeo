@@ -3280,13 +3280,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video01.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3299,13 +3295,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video02.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3318,13 +3310,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video03.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3338,13 +3326,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video01.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3357,13 +3341,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video02.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3376,13 +3356,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video03.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3395,13 +3371,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video01.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3414,13 +3386,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video02.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -3433,13 +3401,9 @@
                 <video width="294" height="472" muted loop>
                   <source src="images/video/video03.mp4" type="video/mp4" />
                 </video>
-              </div>
-              <div class="item__title">
-                <span class="highlighted-yellow">ЦЕНА И СРОКИ</span>
-                ЗАРАНЕЕ
-              </div>
-              <div class="item__play-btn">
-                <img src="images/play-btn.svg" />
+                <div class="item__play-btn">
+                  <img src="images/play-btn.svg" />
+                </div>
               </div>
             </div>
           </swiper-slide>
@@ -4022,7 +3986,7 @@
         if (botsSwiperEl) {
           const botsConfig = {
             autoplay: {
-              delay: 300000,
+              delay: 3000,
               disableOnInteraction: false,
             },
             loop: true,
@@ -4123,6 +4087,23 @@
             swiper.autoplay.start();
             console.log("move");
           });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("popup-video");
+        let offsetTop = document.querySelector(".stories").offsetTop;
+        window.addEventListener("resize", (event) => {
+          offsetTop = document.querySelector(".stories").offsetTop;
+        });
+        video.addEventListener("fullscreenchange", () => {
+          if (!document.fullscreenElement) {
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "instant",
+            });
+          }
         });
       });
     </script>
