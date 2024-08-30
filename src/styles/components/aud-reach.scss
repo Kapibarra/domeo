@@ -17,6 +17,7 @@
     font-weight: 300;
     @media screen and (max-width: 767px) {
       max-width: 335px !important;
+      margin-bottom: 20px;
     }
   }
   & .aud-reach__text {
@@ -38,6 +39,7 @@
     @media screen and (max-width: 767px) {
       max-width: 335px;
       text-align: left;
+      padding-top: 20px;
     }
   }
   & .aud-reach__bg {
@@ -59,10 +61,17 @@
     background: rgba(16, 16, 16, 0.3);
     padding: 47px 29px;
     @media screen and (max-width: 767px) {
-      top: 408px;
+      top: 420px;
       left: 50%;
+      width: 154px;
+      height: 154px;
       transform: translate(-50%, -50%);
     }
+  }
+  & .aud-reach__mobile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   & .aud-reach__content-top {
     max-width: 768px;
@@ -73,7 +82,8 @@
     white-space: nowrap;
     position: relative;
     @media screen and (max-width: 767px) {
-      margin-top: 68px;
+      margin-top: 0px;
+      display: none;
     }
     &::before,
     &::after {
@@ -88,11 +98,17 @@
     &::before {
       left: 0;
       background: linear-gradient(to right, rgba(#0a0a0c, 1), transparent);
+      @media screen and (max-width: 767px) {
+        background: none;
+      }
     }
 
     &::after {
       right: 0;
       background: linear-gradient(to left, rgba(#0a0a0c, 1), transparent);
+      @media screen and (max-width: 767px) {
+        background: none;
+      }
     }
     & .content__items-top.slide__right {
       display: inline-block;
@@ -111,6 +127,9 @@
     font-size: 0;
     white-space: nowrap;
     position: relative;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     &::before,
     &::after {
       content: "";
@@ -124,11 +143,17 @@
     &::before {
       left: 0px;
       background: linear-gradient(to right, rgba(#0a0a0c, 1), transparent);
+      @media screen and (max-width: 767px) {
+        background: none;
+      }
     }
 
     &::after {
       right: 0;
       background: linear-gradient(to left, rgba(#0a0a0c, 1), transparent);
+      @media screen and (max-width: 767px) {
+        background: none;
+      }
     }
     & .content__items-btm.slide__left {
       display: inline-block;
@@ -157,5 +182,10 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+.mobile-only {
+  @media screen and (max-width: 767px) {
+    display: block !important;
   }
 }

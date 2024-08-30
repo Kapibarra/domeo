@@ -2,8 +2,17 @@
   margin-top: 130px;
   position: relative;
   overflow: hidden;
+  & h2 {
+    font-size: 42px !important;
+  }
   & h3 {
     font-weight: 300;
+  }
+  & .mt-20 {
+    @media screen and (max-width: 767px) {
+      margin-top: -30px !important;
+      margin-bottom: 22px !important;
+    }
   }
   & .segments__bg {
     position: absolute;
@@ -38,6 +47,7 @@
     @media screen and (max-width: 767px) {
       max-width: 335px;
       text-align: left;
+      padding-top: 20px;
     }
   }
   & h3 {
@@ -60,6 +70,10 @@
     text-align: left;
     text-transform: uppercase;
     text-align: center;
+    @media screen and (max-width: 767px) {
+      text-align: left;
+      max-width: 335px;
+    }
   }
   & .segments__item {
     box-sizing: border-box;
@@ -136,5 +150,11 @@
         }
       }
     }
+  }
+}
+.mobile-br {
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
   }
 }

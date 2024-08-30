@@ -28,6 +28,7 @@
     @media screen and (max-width: 767px) {
       max-width: 335px;
       text-align: left;
+      padding-top: 20px;
     }
   }
 }
@@ -46,6 +47,9 @@
   & .target {
     padding-top: 31px !important;
     padding-bottom: 31px !important;
+  }
+  & .br-8 {
+    border-radius: 8px;
   }
   .container__title {
     color: rgb(255, 255, 255);

@@ -12,12 +12,13 @@ body.no-scroll {
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
-  margin-top: 16px;
+  margin-top: 25px;
   display: flex;
   flex-direction: row;
   gap: 6px;
   flex-wrap: nowrap;
   justify-content: flex-end;
+  align-items: center;
   color: rgb(180, 195, 216);
   font-family: "Commissioner";
   font-size: 12px;
