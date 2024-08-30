@@ -2670,7 +2670,6 @@
           delay="3000"
           pauseOnMouseEnter="true"
         >
-          >
           <swiper-slide
             ><div class="bots__item">
               <div class="bots__item-content">
@@ -3287,9 +3286,10 @@
         </div>
       </section>
       <section class="folder">
-        <div class="section__title">
-          Кто с нами работает и какие есть кейсы?
-        </div>
+        <h2 class="section__title">
+          Кто с нами<br class="mobile-br" />
+          работает и какие <br class="mobile-br" />есть кейсы?
+        </h2>
         <div class="folder__slider">
           <img
             class="slider__front"
@@ -3513,7 +3513,10 @@
         <div class="folder__bg"><img src="images/folder-bg.png" /></div>
       </section>
       <section class="stories">
-        <h2 class="section__title">Посмотрите отзывы наших рекламодателей</h2>
+        <h2 class="section__title">
+          Посмотрите <br class="mobile-br" />
+          отзывы наших рекламодателей
+        </h2>
         <div class="stories__title">
           Идеальный медиа-ресурс для вашей рекламы
         </div>
@@ -4248,6 +4251,7 @@
               delay: 304400,
               disableOnInteraction: false,
             },
+            centeredSlides: true,
             loop: true,
             breakpoints: {
               320: {
@@ -4303,6 +4307,11 @@
         breakpoints: {
           320: {
             slidesPerView: 3,
+          },
+          375: {
+            slidesPerView: 3.5,
+            centeredSlides: true,
+            spaceBetween: 8,
           },
           768: {
             slidesPerView: 5,

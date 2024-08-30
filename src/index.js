@@ -65,16 +65,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalSlides = sliderImages.length;
   const visibleSlides = 4;
   const animationDuration = 3000; // длительность мс
-  const animationDelay = 0; // анимация следующего слайда
-  const removalDelay = 150; // удаления класса
+  const animationDelay = 0;
+  const removalDelay = 150;
   let currentIndex = -1;
+  const isMobile = window.innerWidth <= 767;
+  const basePosition = isMobile ? 100 : 125;
+  const spacing = isMobile ? 18 : 25;
 
+  // Установка начальных позиций слайдов
   sliderImages.forEach((slide, index) => {
     slide.setAttribute("id", `${index + 1}`);
     if (index < visibleSlides) {
-      slide.style.left = `${125 - (visibleSlides - 1 - index) * 25}px`;
+      slide.style.left = `${
+        basePosition - (visibleSlides - 1 - index) * spacing
+      }px`;
     } else {
-      slide.style.left = "25px";
+      slide.style.left = `${basePosition - visibleSlides * spacing}px`;
       slide.style.zIndex = 1;
     }
   });
@@ -82,7 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function animateNextSlide() {
     if (currentIndex >= 0) {
       const prevIndex = currentIndex;
-      sliderImages[prevIndex].style.left = "25px";
+      sliderImages[prevIndex].style.left = `${
+        basePosition - visibleSlides * spacing
+      }px`;
       sliderImages[prevIndex].style.zIndex = 1;
       setTimeout(() => {
         sliderImages[prevIndex].classList.remove("animated-slide");
@@ -90,13 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     currentIndex = (currentIndex + 1) % totalSlides;
-    sliderImages[currentIndex].style.left = "125px";
+    sliderImages[currentIndex].style.left = `${basePosition}px`;
     sliderImages[currentIndex].style.zIndex = 6;
     sliderImages[currentIndex].classList.add("animated-slide");
 
     for (let i = 1; i <= visibleSlides; i++) {
       const nextVisibleIndex = (currentIndex + i) % totalSlides;
-      sliderImages[nextVisibleIndex].style.left = `${125 - i * 25}px`;
+      sliderImages[nextVisibleIndex].style.left = `${
+        basePosition - i * spacing
+      }px`;
       sliderImages[nextVisibleIndex].style.zIndex = 6 - i;
     }
 

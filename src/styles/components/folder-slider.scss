@@ -2,11 +2,24 @@
   margin-top: 130px;
   position: relative;
   overflow: hidden;
+  & h2 {
+    & .mobile-br {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: block !important;
+        margin-right: 5px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 80px;
+  }
   & .folder__button-wrapper {
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
   }
+
   & .folder__bg {
     position: absolute;
     z-index: -1;
@@ -31,7 +44,7 @@
   z-index: 1;
   @media screen and (max-width: 767px) {
     max-width: 335px;
-    margin-top: 100px;
+    margin-top: 75px;
     height: 275px;
   }
   & .slider__front {
@@ -61,6 +74,7 @@
     transition: left 0.3s ease-in;
     @media screen and (max-width: 767px) {
       width: 217px;
+      top: -20px;
     }
   }
 }
@@ -119,10 +133,10 @@
       transform: translateX(0px) translateY(0px);
     }
     40% {
-      transform: translateX(0px) translateY(-55px);
+      transform: translateX(0px) translateY(-40px);
     }
     65% {
-      transform: translateX(0px) translateY(-55px);
+      transform: translateX(0px) translateY(-40px);
     }
     80% {
       transform: translateX(0px) translateY(60px);

@@ -23,6 +23,12 @@
   }
   & h2 {
     max-width: 442px;
+    & .mobile-br {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+    }
   }
   @media screen and (max-width: 767px) {
     margin-top: 80px;
