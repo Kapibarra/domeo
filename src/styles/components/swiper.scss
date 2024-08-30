@@ -93,23 +93,28 @@ swiper-slide {
   }
 }
 /* scale bots */
-.bots {
+.bots__swiper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   & .swiper-slide-prev {
     transform: scale(0.7);
-    transition: transform 0.35s ease, opacity 0.35s ease;
+    transition: transform 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
     opacity: 0.7;
+    transform-origin: center;
     padding-right: 60px;
   }
   & .swiper-slide-next {
     transform: scale(0.7);
-    transition: transform 0.35s ease, opacity 0.35s ease;
+    transition: transform 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
     opacity: 0.7;
+    transform-origin: center;
     padding-left: 60px;
   }
 
   & .swiper-slide-active {
     transform: scale(1);
-    transition: transform 0.35s ease, opacity 0.35s ease;
+    transition: transform 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
     opacity: 1;
     & .bots__item {
       & .bots__item-image {
@@ -117,13 +122,12 @@ swiper-slide {
       }
     }
   }
-  .swiper ::slotted(swiper-slide) {
-    overflow: visible !important;
-  }
   & swiper-slide {
     transform: scale(0.7);
-    transition: transform 0.35s ease, opacity 0.35s ease;
+    transition: transform 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
     overflow: visible !important;
+    transform-origin: center;
+    max-height: 242px;
   }
   @media screen and (max-width: 1920px) {
     & .swiper-slide-prev {
@@ -152,6 +156,7 @@ swiper-slide {
     }
     & swiper-slide {
       transform: scale(0.98);
+      max-height: 431px;
     }
   }
   @media screen and (max-width: 767px) {

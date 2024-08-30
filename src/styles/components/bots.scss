@@ -77,6 +77,7 @@
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: center;
+        gap: 30px;
       }
       & .bots__content-wrapper {
         display: flex;
@@ -115,9 +116,6 @@
         & .bold {
           font-weight: 500 !important;
         }
-      }
-      .item__logo {
-        margin-top: 22px;
       }
     }
     & .bots__item-image {
