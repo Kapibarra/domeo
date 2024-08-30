@@ -17,7 +17,18 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-
+    & .footer__logo {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        max-width: 65px;
+      }
+      & img {
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          max-width: 65px;
+        }
+      }
+    }
     & .footer__logo-title {
       color: rgb(255, 255, 255);
       font-family: "Commissioner";
@@ -27,8 +38,17 @@
       text-align: left;
       display: flex;
       align-items: center;
+      @media screen and (max-width: 767px) {
+        align-items: flex-start;
+      }
       & img {
         margin-right: 7px;
+      }
+      & .mobile-br {
+        display: none;
+        @media screen and (max-width: 767px) {
+          display: block;
+        }
       }
     }
   }
@@ -37,6 +57,9 @@
     flex-direction: row;
     gap: 30px;
     margin-top: 43px;
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
     & .contacts__items {
       display: flex;
       flex-direction: column;
@@ -84,6 +107,9 @@
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
     & .custom-checkbox {
       display: none;
     }
@@ -102,8 +128,8 @@
     .custom-checkbox + label::before {
       content: "";
       position: absolute;
-      top: 46%;
-      left: 57%;
+      top: 40%;
+      left: 55%;
       width: 4px;
       height: 8px;
       border: solid white;

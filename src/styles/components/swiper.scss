@@ -85,13 +85,12 @@ swiper-slide {
 
     & swiper-slide {
       transition: all 0.35s ease, transform 0.3s ease;
-      transform: scale(1) !important;
+      transform: scale(0.8) !important;
       transform-origin: center;
       opacity: 0.4;
     }
     & .swiper-slide-active {
       transition: opacity 0.3s ease, transform 0.3s ease;
-      width: 138px !important;
       transform-origin: center;
       transform: scale(1) !important;
     }
@@ -177,3 +176,15 @@ swiper-slide {
 }
 
 /*stories*/
+.stories__swiper {
+  & .swiper-slide-next {
+    @media screen and (max-width: 767px) {
+      opacity: 0.6 !important;
+    }
+  }
+  & .swiper-slide-prev {
+    @media screen and (max-width: 384px) {
+      opacity: 0 !important;
+    }
+  }
+}
