@@ -2296,10 +2296,10 @@
               </div>
             </div>
             <div class="logo-item">
-              <img src="images/placements/pin-icon.svg" alt="Logo 5" />
+              <img src="images/placements/insta-icon.svg" alt="Logo 7" />
               <div class="audience-counter">
                 <img src="images/icons/user-icon.svg" alt="Audience Icon" />
-                <span>30k</span>
+                <span>102k</span>
               </div>
             </div>
             <div class="logo-item">
@@ -2310,12 +2310,13 @@
               </div>
             </div>
             <div class="logo-item">
-              <img src="images/placements/insta-icon.svg" alt="Logo 7" />
+              <img src="images/placements/pin-icon.svg" alt="Logo 5" />
               <div class="audience-counter">
                 <img src="images/icons/user-icon.svg" alt="Audience Icon" />
-                <span>102k</span>
+                <span>30k</span>
               </div>
             </div>
+
             <div class="placements__bg">
               <img src="images/placements-bg.png" />
             </div>
@@ -4307,9 +4308,16 @@
         breakpoints: {
           320: {
             slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 8,
           },
           375: {
             slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 8,
+          },
+          428: {
+            slidesPerView: 6,
             centeredSlides: true,
             spaceBetween: 8,
           },
@@ -4327,6 +4335,9 @@
       swiperEl.initialize();
       function checkResolutionAndSlide() {
         if (window.innerWidth >= 320) {
+          swiperEl.swiper.slideTo(3);
+        }
+        if (window.innerWidth >= 375) {
           swiperEl.swiper.slideTo(3);
         }
         if (window.innerWidth >= 767) {

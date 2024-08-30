@@ -90,9 +90,9 @@
 }
 .slider__content-thumb {
   box-sizing: border-box;
+  display: block;
   width: 100%;
   max-width: 138px;
-  height: auto;
   border-radius: 50px;
   backdrop-filter: blur(4.31px);
   background: rgba(92, 95, 142, 0.1);

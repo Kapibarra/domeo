@@ -145,9 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
         largeImage.src = largeImageSrc;
         largeImageContainer.innerHTML = "";
         largeImageContainer.appendChild(largeImage);
-
         largeImageContainer.classList.add("active");
         overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
       }
     });
   });
@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   overlay.addEventListener("click", () => {
     largeImageContainer.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.style.overflow = "";
   });
 });
 

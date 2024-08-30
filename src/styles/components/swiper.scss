@@ -81,18 +81,22 @@ swiper-slide {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 55px;
-
     & swiper-slide {
       transition: all 0.35s ease, transform 0.3s ease;
       transform: scale(0.8) !important;
-      transform-origin: center;
       opacity: 0.4;
+      margin-right: 6.2px !important;
+      margin-top: 0px;
+      @media screen and (max-width: 428px) {
+        margin-top: 6px;
+      }
     }
     & .swiper-slide-active {
       transition: opacity 0.3s ease, transform 0.3s ease;
       transform-origin: center;
       transform: scale(1) !important;
+      width: 138px !important;
+      margin-top: 0px;
     }
   }
 }
