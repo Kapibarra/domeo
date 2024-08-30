@@ -1,0 +1,204 @@
+.bots {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 130px;
+  & h2 {
+    max-width: 576px;
+  }
+  & .bots__swiper {
+    margin: 0 auto;
+  }
+  & h3 {
+    max-width: 636px;
+    font-weight: 300;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 80px;
+  }
+  & .bots__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    gap: 78.5px;
+    min-height: 242px;
+    min-width: 588px;
+    border: 1px solid rgb(75, 80, 127);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    background: rgba(70, 74, 128, 0.3);
+    padding: 37px 33px 29px 32px;
+    @media screen and (max-width: 1570px) {
+      flex-wrap: wrap;
+      min-width: 290px !important;
+      max-width: 290px;
+      min-height: 456px;
+      gap: 30px;
+      padding: 37px 33px 29px 32px;
+      height: 431px;
+    }
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap !important;
+      min-width: 290px !important;
+      max-width: 290px;
+      justify-content: center;
+      gap: 0px;
+      padding: 20px 15px 30px 15px;
+      min-height: 431px;
+    }
+    & .wings {
+      position: absolute;
+      top: 75px;
+      width: 187px;
+      right: 33px;
+      z-index: -1;
+      @media screen and (max-width: 1570px) {
+        top: 306px;
+        right: 51px;
+      }
+      @media screen and (max-width: 767px) {
+        top: 256px;
+        right: 51px;
+      }
+    }
+    & .bots__item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      @media screen and (max-width: 1570px) {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      }
+      @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      & .item__raiting {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 7px;
+        & img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      & .item__text {
+        color: rgb(255, 255, 255);
+        font-family: "Commissioner";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 125%;
+        text-align: left;
+        width: 100%;
+        max-width: 292px;
+        @media screen and (max-width: 1570px) {
+          text-align: center;
+        }
+        & .bold {
+          font-weight: 500 !important;
+        }
+      }
+      .item__logo {
+        margin-top: 22px;
+      }
+    }
+    & .bots__item-image {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1570px) {
+        position: absolute;
+        left: 86px;
+        bottom: 30px;
+      }
+    }
+    & .bots__item-image img {
+      width: 100%;
+      max-width: 116px;
+
+      border-radius: 4px;
+    }
+  }
+  & .bots__text {
+    width: 100%;
+    max-width: 468px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: rgb(180, 195, 216);
+    font-family: "Commissioner";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 135%;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      max-width: 335px;
+    }
+  }
+  & .bots__button-wrapper {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+.bots__item-image-lg {
+  display: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  max-width: 556px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 767px) {
+    max-width: 90%;
+    max-height: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (max-width: 428px) {
+    max-width: 90%;
+    max-height: 500px;
+    left: 9%;
+    transform: translate(-4%, -50%);
+  }
+}
+
+/*zoom*/
+.bots__item-image-lg img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  @media screen and (max-width: 767px) {
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+.bots__item-image-lg.active {
+  display: block;
+  z-index: 101;
+  position: fixed;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  cursor: zoom-out;
+}
+
+.overlay.active {
+  display: block;
+}

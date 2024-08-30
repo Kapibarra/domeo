@@ -1,0 +1,23 @@
+.ty-page {
+  background: rgb(10, 10, 12);
+  & .ty-logo {
+  }
+  & .ty__title {
+  }
+  & .ty__subtitle {
+  }
+  & .ty__logos-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    & .logo__item {
+      box-sizing: border-box;
+      border: 1px solid rgb(75, 80, 127);
+      border-radius: 10px;
+
+      backdrop-filter: blur(4px);
+      background: rgba(70, 74, 128, 0.3);
+    }
+  }
+}

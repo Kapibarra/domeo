@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Спасибо за заявку</title>
+  </head>
+  <body>
+    <style>
+      .ty-page {
+        background: rgb(10, 10, 12);
+      }
+      .ty__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+      }
+      .ty__title {
+        color: rgb(255, 255, 255);
+        font-family: "Alice";
+        font-size: 65px;
+        font-weight: 400;
+        line-height: 74px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 60px;
+      }
+      .ty__subtitle {
+        color: rgb(255, 255, 255);
+        font-family: "Commissioner";
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 31px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 60px;
+      }
+      .ty__subtitle-sm {
+        color: rgb(255, 255, 255);
+        font-family: "Commissioner";
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 31px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 60px;
+      }
+      .ty__logos-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 19px;
+        width: 100%;
+        max-width: 1167px;
+        margin: 0 auto;
+        margin-bottom: 150px;
+      }
+
+      .logo__item {
+        box-sizing: border-box;
+        border: 1px solid rgb(75, 80, 127);
+        border-radius: 10px;
+        width: 376px;
+        height: 104px;
+        backdrop-filter: blur(4px);
+        background: rgba(70, 74, 128, 0.3);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 22px;
+      }
+      .item__img {
+        margin-right: 15px;
+      }
+      .content__title {
+        color: rgb(255, 255, 255);
+        font-family: "Commissioner";
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+      .content__link {
+        text-decoration: none;
+        color: rgb(208, 254, 6);
+        font-family: "Commissioner";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 1168px) {
+        .ty__logos-wrapper {
+          justify-content: center;
+          gap: 15px;
+        }
+        .ty__subtitle {
+          font-size: 17px;
+          font-weight: 300;
+          max-width: 315px;
+          margin-bottom: 10px;
+        }
+        .ty__subtitle-sm {
+          font-size: 17px;
+          font-weight: 300;
+          max-width: 321px;
+          margin-bottom: 40px;
+        }
+        .content__title {
+          font-size: 18px;
+        }
+        .logo__item {
+          max-width: 335px;
+        }
+      }
+    </style>
+    <div class="ty_page">
+      <div class="ty__logo">
+        <img src="images/thank-you/ty-logo.svg" />
+      </div>
+      <h2 class="ty__title">Спасибо!</h2>
+      <h3 class="ty__subtitle">
+        В колл-центре уже началось сражение за право позвонить Вам
+      </h3>
+      <h3 class="ty__subtitle-sm">С Вами свяжется выживший менеджер :)</h3>
+      <div class="ty__logos-wrapper">
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/01.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo.ru</div>
+            <a class="content__link" href="https://domeo.ru"
+              >Основной сайт компании</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/02.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Telegram</div>
+            <a class="content__link" href="https://t.me/domeoru"
+              >Тут новости Domeo</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/03.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Вконтакте</div>
+            <a class="content__link" href="https://vk.com/domeo"
+              >Тут портфолио</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/04.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo на YouTube</div>
+            <a
+              class="content__link"
+              href="https://www.youtube.com/c/DOMEO-ru/videos"
+              >Тут обзоры ремонтов</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/05.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Инс***граме</div>
+            <a class="content__link" href="https://www.instagram.com/domeo.ru/"
+              >Тут обзоры ремонтов</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/06.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Дзен</div>
+            <a class="content__link" href="https://dzen.ru/domeoremont"
+              >Тут новости и обзоры ремонтов</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/07.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Одноклассинаках</div>
+            <a class="content__link" href="https://ok.ru/dizajninterera"
+              >Тут портфолио</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/08.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Pinterest</div>
+            <a class="content__link" href="https://ru.pinterest.com/domeoru/"
+              >Тут портфолио</a
+            >
+          </div>
+        </div>
+        <div class="logo__item">
+          <div class="item__img">
+            <img src="images/thank-you/09.svg" alt="" />
+          </div>
+          <div class="item__content">
+            <div class="content__title">Domeo в Houzz</div>
+            <a
+              class="content__link"
+              href="https://www.houzz.ru/professionaly/dizaynery-interyera/domeo-domeo-pfvwru-pf~1421370481"
+              >Тут портфолио</a
+            >
+          </div>
+        </div>
+      </div>
+      <section class="partners__wrapper">
+        <div class="partners__title">Постоянные рекламодатели:</div>
+        <div class="partners">
+          <img src="images/partners/01.svg" alt="" class="partners__logo" />
+          <img src="images/partners/02.svg" alt="" class="partners__logo" />
+          <img src="images/partners/03.svg" alt="" class="partners__logo" />
+          <img src="images/partners/04.svg" alt="" class="partners__logo" />
+          <img src="images/partners/05.svg" alt="" class="partners__logo" />
+          <img src="images/partners/06.svg" alt="" class="partners__logo" />
+          <img src="images/partners/07.svg" alt="" class="partners__logo" />
+          <img src="images/partners/08.svg" alt="" class="partners__logo" />
+          <img src="images/partners/09.svg" alt="" class="partners__logo" />
+          <img src="images/partners/10.svg" alt="" class="partners__logo" />
+          <img src="images/partners/11.svg" alt="" class="partners__logo" />
+          <img src="images/partners/12.svg" alt="" class="partners__logo" />
+          <img src="images/partners/13.svg" alt="" class="partners__logo" />
+          <img src="images/partners/14.svg" alt="" class="partners__logo" />
+          <img src="images/partners/15.svg" alt="" class="partners__logo" />
+          <img src="images/partners/16.svg" alt="" class="partners__logo" />
+          <img src="images/partners/17.svg" alt="" class="partners__logo" />
+        </div>
+      </section>
+      <sectio class="partners__wrapper-mobile">
+        <div class="partners-mobile">
+          <img src="images/partners/01.svg" alt="" class="partners__logo" />
+          <img src="images/partners/02.svg" alt="" class="partners__logo" />
+          <img src="images/partners/03.svg" alt="" class="partners__logo" />
+          <img src="images/partners/04.svg" alt="" class="partners__logo" />
+          <img src="images/partners/05.svg" alt="" class="partners__logo" />
+          <img src="images/partners/06.svg" alt="" class="partners__logo" />
+          <img src="images/partners/07.svg" alt="" class="partners__logo" />
+          <img src="images/partners/08.svg" alt="" class="partners__logo" />
+          <img src="images/partners/09.svg" alt="" class="partners__logo" />
+          <img src="images/partners/10.svg" alt="" class="partners__logo" />
+          <img src="images/partners/11.svg" alt="" class="partners__logo" />
+          <img src="images/partners/12.svg" alt="" class="partners__logo" />
+          <img src="images/partners/13.svg" alt="" class="partners__logo" />
+          <img src="images/partners/14.svg" alt="" class="partners__logo" />
+          <img src="images/partners/15.svg" alt="" class="partners__logo" />
+          <img src="images/partners/16.svg" alt="" class="partners__logo" />
+          <img src="images/partners/17.svg" alt="" class="partners__logo" />
+        </div>
+      </sectio>
+    </div>
+  </body>
+</html>

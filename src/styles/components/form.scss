@@ -1,0 +1,143 @@
+.form {
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  background: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 520px;
+  padding: 60px 50px;
+  z-index: 3;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    max-width: 335px;
+    padding: 24px 20px;
+  }
+  & button {
+    margin-top: 16px !important;
+  }
+  & .close__button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+  }
+  &__title {
+    color: rgb(10, 10, 12);
+    font-family: "Alice";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    & br {
+      display: none;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 246px;
+      margin: 0 auto;
+      margin-bottom: 8px;
+      & br {
+        display: block;
+      }
+    }
+  }
+  & span {
+    color: rgb(10, 10, 12);
+    font-family: "Commissioner";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 135%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      max-width: 235px;
+      line-height: 105%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__input {
+    color: rgba(10, 10, 12, 1);
+    font-family: "Commissioner";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+    text-align: left;
+    border: 1px solid rgb(216, 219, 255);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    background: rgba(210, 211, 232, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 19px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    &::placeholder {
+      color: rgba(10, 10, 12, 0.5);
+    }
+    &:focus {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid rgb(123, 135, 255);
+      background: rgba(255, 255, 255, 0.3);
+    }
+    &:focus-visible {
+      transition: all 0.2s ease-in-out;
+      outline: none;
+    }
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid rgb(123, 135, 255);
+    }
+
+    &:active {
+    }
+  }
+}
+#phone {
+  color: rgba(10, 10, 12, 0.3);
+  &:focus-visible {
+    color: rgba(10, 10, 12, 1);
+  }
+}
+#phone.filled {
+  color: rgba(10, 10, 12, 1);
+  opacity: 1;
+}
+.form__wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.form__overlay--visible {
+  display: flex;
+}
+.error {
+  color: rgba(211, 66, 66, 1);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Commissioner";
+  display: none;
+  margin-bottom: 10px;
+  gap: 5px;
+  align-items: center;
+}
+.error.show {
+  display: flex;
+}
+.errorInput {
+  border: 1px solid rgba(211, 66, 66, 1);
+}

@@ -1,0 +1,208 @@
+.audience__button {
+  background-image: url("../assets/images/aud-button-bg.png");
+}
+.audience {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  position: relative;
+  & h3 {
+    font-weight: 300;
+  }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 42px !important;
+    }
+  }
+  & .audience__section-title {
+    margin: 0 auto;
+    padding-top: 18px;
+    color: rgb(255, 255, 255);
+    font-family: "Alice";
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 28.2px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      line-height: 34.2px;
+      margin-bottom: 45px;
+    }
+    & span {
+      font-size: 23px;
+    }
+  }
+  & .audience__bg {
+    position: absolute;
+    bottom: -30px;
+    z-index: -1;
+    left: -250px;
+    @media screen and (max-width: 767px) {
+      left: -250px;
+      bottom: 275px;
+      z-index: 0;
+    }
+  }
+  & .audience__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 60px;
+    gap: 60px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+      gap: 25px;
+    }
+    & .audience__image {
+      position: relative;
+      & .audience__image-button {
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        color: rgb(10, 10, 12);
+        font-family: "Commissioner";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.35px;
+        letter-spacing: -0.39px;
+        text-align: left;
+        z-index: 1;
+        animation: shake 2s infinite;
+        & img {
+          position: relative;
+          right: -110px;
+          top: 0px;
+          z-index: -1;
+        }
+      }
+    }
+    & .audience__image-slide {
+      position: relative;
+      z-index: 5;
+      & .audience__image-bg {
+        position: absolute;
+        top: -25px;
+        height: 330px;
+        overflow: hidden;
+        z-index: -1;
+        @media screen and (max-width: 767px) {
+          top: -50px;
+        }
+        & > img {
+          animation: scrollBg 9s infinite linear;
+        }
+        & .image-wrapper {
+          display: flex;
+          flex-direction: column;
+          animation: scrollBg 9s linear infinite;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 70px;
+          z-index: 2;
+        }
+
+        &::before {
+          top: 0px;
+          left: 0px;
+          background: linear-gradient(to bottom, rgba(#0a0a0c, 1), transparent);
+        }
+
+        &::after {
+          bottom: 0px;
+          right: 0px;
+          background: linear-gradient(to top, rgba(#0a0a0c, 1), transparent);
+        }
+      }
+    }
+
+    & .audience__content-text {
+      position: relative;
+      z-index: 99;
+      margin-top: -15px;
+      width: 100%;
+      max-width: 373px;
+      color: rgb(180, 195, 216);
+      font-family: "Commissioner";
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 135%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      @media screen and (max-width: 767px) {
+        max-width: 335px;
+        margin-top: 0;
+        text-align: left;
+      }
+      & span {
+        color: rgb(93, 115, 146);
+        font-family: "Commissioner";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 135%;
+        width: 373px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: uppercase;
+        @media screen and (max-width: 767px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  & .audience__title-logo {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+    @media screen and (max-width: 767px) {
+      margin-top: 80px;
+    }
+  }
+}
+.sm-gap {
+  gap: 10px !important;
+  @media screen and (max-width: 767px) {
+    gap: 45px !important;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(5px);
+  }
+  10% {
+    transform: translateX(-5px);
+  }
+  15% {
+    transform: translateX(5px);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes scrollBg {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

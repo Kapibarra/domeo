@@ -1,0 +1,335 @@
+.about {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 130px;
+  @media screen and (max-width: 767px) {
+    max-width: 335px;
+    padding-bottom: 80px;
+  }
+  & .about__bg {
+    position: absolute;
+    z-index: -1;
+    top: 1050px;
+    left: 120px;
+    @media screen and (max-width: 767px) {
+      top: 1450px;
+      left: -180px;
+    }
+  }
+  & .about__logo {
+    color: rgb(255, 255, 255);
+    font-family: "Alice Regular";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 6px;
+    }
+  }
+  & .about__title {
+    color: rgb(255, 255, 255);
+    font-family: "Alice Regular";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  & .about__subtitle {
+    color: rgb(180, 195, 216);
+    font-family: "Commissioner";
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 135%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+  & .about__slider-container {
+    box-sizing: border-box;
+    border: 1px solid rgb(75, 80, 127);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    background: rgba(70, 74, 128, 0.3);
+    padding: 32px 136px;
+    @media screen and (max-width: 767px) {
+      padding: 32px 27.5px;
+    }
+  }
+  /*slider*/
+  .slider {
+    position: relative;
+    width: 493px;
+    overflow: hidden;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+      width: 280px;
+    }
+  }
+  .slider__title {
+    color: rgb(255, 255, 255);
+    font-family: "Commissioner";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 135%;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    @media screen and (max-width: 767px) {
+      width: 265px;
+    }
+  }
+  .slider__subtitle {
+    color: rgb(154, 183, 223);
+    font-family: "Commissioner";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 135%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    min-width: 493px;
+    position: relative;
+    height: 133px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 24px;
+    background-color: #ddd;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+      width: 280px;
+      min-width: unset;
+      height: 75px;
+      object-fit: cover;
+    }
+    & img {
+      @media screen and (max-width: 767px) {
+        max-width: 280px;
+      }
+    }
+  }
+
+  .slider__button {
+    position: absolute;
+    top: 182px;
+    transform: translateY(-50%);
+    background: rgb(40, 45, 81);
+    color: white;
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      background: rgb(137, 74, 167);
+    }
+    @media screen and (max-width: 767px) {
+      top: 176px;
+    }
+  }
+
+  .prev {
+    left: 120px;
+    z-index: 9999;
+    @media screen and (max-width: 767px) {
+      left: 10px;
+    }
+  }
+
+  .next {
+    right: 120px;
+    @media screen and (max-width: 767px) {
+      right: 10px;
+    }
+  }
+
+  .slider_indicators {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 11px;
+    @media screen and (max-width: 767px) {
+      gap: 6px;
+    }
+  }
+
+  .indicator__item {
+    width: fit-content;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid rgba(75, 80, 127, 0.3);
+      backdrop-filter: blur(4px);
+      background: rgba(70, 74, 128, 0.1);
+    }
+    & .item__counter {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      flex-wrap: nowrap;
+      align-items: center;
+      color: rgb(206, 206, 209);
+      font-family: "Commissioner";
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 135%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+  }
+
+  .indicator__item.active {
+    border: 1px solid rgb(75, 80, 127);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    background: rgba(70, 74, 128, 0.3);
+  }
+}
+/*slider subs counter position*/
+.slide__subs-counter {
+  width: fit-content;
+  padding: 2px 6px;
+  background: #fff38c;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Commissioner";
+  @media screen and (max-width: 767px) {
+    font-size: 9px;
+    min-width: 90px;
+    padding: 1px 2px;
+  }
+  & .bold {
+    color: #000;
+    font-weight: 600;
+    font-family: "Commissioner";
+    @media screen and (max-width: 767px) {
+      font-size: 9px;
+    }
+  }
+}
+.counter-position-1 {
+  top: 42px;
+  left: 50px;
+  position: absolute;
+  font-size: 14.2px;
+
+  @media screen and (max-width: 767px) {
+    top: 23px;
+    left: 27px;
+  }
+}
+.counter-position-2 {
+  top: 20px;
+  left: 235px;
+  position: absolute;
+  font-size: 8.02px;
+  line-height: 10.83px;
+  & span {
+    font-size: 8.02px;
+    line-height: 10.83px;
+  }
+  @media screen and (max-width: 767px) {
+    top: 8px;
+    left: 134px;
+  }
+}
+.counter-position-3 {
+  top: 76px;
+  left: 128px;
+  position: absolute;
+  font-size: 13.62px;
+  @media screen and (max-width: 767px) {
+    top: 42px;
+    left: 73px;
+  }
+}
+.counter-position-4 {
+  top: 95px;
+  left: 151px;
+  position: absolute;
+  font-weight: 500;
+  font-size: 9.61px;
+  @media screen and (max-width: 767px) {
+    top: 51px;
+    left: 87px;
+  }
+}
+.counter-position-5 {
+  top: 42px;
+  left: 170px;
+  position: absolute;
+  font-size: 8.33px;
+  letter-spacing: -0.4px;
+  @media screen and (max-width: 767px) {
+    top: 22px;
+    left: 95px;
+  }
+}
+.counter-position-6 {
+  top: 58px;
+  left: 117px;
+  font-size: 11.22px;
+  position: absolute;
+  @media screen and (max-width: 767px) {
+    top: 32px;
+    left: 66px;
+  }
+}
+.counter-position-7 {
+  top: 105px;
+  left: 87px;
+  position: absolute;
+  font-size: 10.42px;
+  letter-spacing: -0.1px;
+  @media screen and (max-width: 767px) {
+    top: 57px;
+    left: 50px;
+  }
+}

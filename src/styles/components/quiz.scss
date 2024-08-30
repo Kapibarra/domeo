@@ -1,0 +1,621 @@
+/* Оверлей */
+.quiz-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  cursor: pointer;
+}
+.quiz__wrapper {
+  display: none;
+}
+.close__btn {
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    top: 12px;
+    right: 12px;
+  }
+}
+.quiz__form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 560px;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 100%;
+    max-height: 690px;
+    max-width: 335px;
+  }
+  & .close__btn {
+    position: absolute;
+  }
+}
+
+.quiz__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz__step {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz__step--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.quiz__title {
+  color: rgb(10, 10, 12);
+  font-family: "Alice";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  margin-top: 40px;
+  @media screen and (max-width: 767px) {
+    margin-top: 12px;
+    font-size: 24px;
+  }
+}
+.quiz__step-counter {
+  color: rgb(75, 80, 127);
+  font-family: "Commissioner";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 135%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  & span {
+    font-weight: 700;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 9px;
+    margin-bottom: 4px;
+  }
+}
+.quiz__question {
+  color: rgb(10, 10, 12);
+  font-family: "Commissioner";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 17px;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.quiz__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 325px;
+  label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 16px;
+    border: 1px solid rgb(216, 219, 255);
+    border-radius: 10px;
+    background: rgba(210, 211, 232, 0.3);
+    width: 100%;
+    max-width: 325px;
+    height: 55px;
+    margin-bottom: 10px;
+    color: rgb(10, 10, 12);
+    font-family: "Commissioner";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 135%;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    @media screen and (max-width: 767px) {
+      max-width: 295px;
+    }
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid rgba(123, 135, 255, 0.3);
+      background: rgba(123, 135, 255, 0.2);
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      margin-right: 13px;
+      height: 24px;
+      width: 24px;
+      accent-color: #7b87ff;
+      background: #000000;
+    }
+  }
+  & .selected {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(123, 135, 255, 1) !important;
+    background: rgba(123, 135, 255, 0.3) !important;
+    cursor: pointer;
+  }
+}
+.row {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 660px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    width: 295px;
+  }
+  & label {
+    margin-bottom: 0px !important;
+  }
+}
+
+.quiz__checkbox-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 680px;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    padding: 20px 16px;
+    color: rgb(10, 10, 12);
+    font-family: "Commissioner";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 135%;
+    text-align: left;
+    border: 1px solid rgb(216, 219, 255);
+    border-radius: 10px;
+    background: rgba(210, 211, 232, 0.3);
+    width: 100%;
+    max-width: 325px;
+    height: 55px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    @media screen and (max-width: 767px) {
+      height: 50px;
+      max-width: 295px;
+    }
+    & input[type="checkbox"] {
+      transition: all 0.2s ease-in-out;
+      margin-right: 13px;
+      border-radius: 6px;
+      height: 24px;
+      width: 24px;
+      accent-color: #7b87ff;
+      border: 1px solid #babee3;
+      cursor: pointer;
+      // &::before {
+      //   content: "";
+      //   display: block;
+      //   border-radius: 3px;
+      //   height: 24px;
+      //   width: 24px;
+      //   border: 1px solid #babee3;
+      // }
+    }
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      border: 1px solid rgba(123, 135, 255, 1);
+      background: rgba(123, 135, 255, 0.2);
+      cursor: pointer;
+      // & input[type="checkbox"]::before {
+      //   transition: all 0.2s ease-in-out;
+      //   content: "";
+      //   display: block;
+      //   height: 24px;
+      //   width: 24px;
+      //   border-radius: 3.3px;
+      // }
+    }
+  }
+  & .selected {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(123, 135, 255, 1) !important;
+    background: rgba(123, 135, 255, 0.3) !important;
+    cursor: pointer;
+    // & input[type="checkbox"]::before {
+    //   transition: all 0.2s ease-in-out;
+    //   content: "";
+    //   display: block;
+    //   height: 24px;
+    //   width: 24px;
+    //   border-radius: 4px;
+    //   border: 1px solid #7b87ff;
+    // }
+  }
+}
+.quiz__input {
+  color: rgba(10, 10, 12, 0.5);
+  font-family: "Commissioner";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0%;
+  text-align: left;
+  border: 1px solid rgb(216, 219, 255);
+  border-radius: 10px;
+  background: rgba(210, 211, 232, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 19px;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  &:focus {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgb(123, 135, 255);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  &:focus-visible {
+    transition: all 0.2s ease-in-out;
+    outline: none;
+  }
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgb(123, 135, 255);
+  }
+}
+
+.quiz__prev,
+.quiz__next,
+.quiz__submit {
+  padding: 16px 51px 16px 51px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  color: rgb(10, 10, 12);
+  font-family: "Commissioner";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  background: rgb(208, 254, 6);
+  @media screen and (max-width: 767px) {
+    padding: 16px 30px 16px 30px;
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0;
+  }
+  &:hover {
+  }
+}
+#next-step-1 {
+  position: absolute;
+  bottom: 56px;
+  @media screen and (max-width: 767px) {
+    bottom: 56px;
+    right: 20px;
+  }
+}
+.quiz__prev {
+  color: rgb(95, 95, 95);
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: left;
+  cursor: pointer;
+  background: #f9f9f9;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 767px) {
+    padding: 16px 0px 16px 0px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #282828;
+    & img {
+      filter: contrast(2);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 0px;
+  }
+}
+.button__wrapper {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 133px;
+  margin-top: 30px;
+  @media screen and (max-width: 767px) {
+    gap: 47px;
+    bottom: 56px;
+    max-width: 295px;
+  }
+}
+.quiz__next {
+  border-radius: 10px;
+  color: rgb(10, 10, 12);
+  font-family: "Commissioner";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: left;
+  background: rgb(208, 254, 6);
+  cursor: pointer;
+  color: #000000;
+  width: fit-content;
+  transition: all 0.18s ease-in-out;
+  &:hover {
+    transition: all 0.18s ease-in-out;
+    background: rgb(169, 203, 19);
+  }
+}
+textarea {
+  height: 170px;
+  resize: none;
+}
+.quiz__submit {
+  border-radius: 10px;
+  color: rgb(10, 10, 12);
+  font-family: "Commissioner";
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  background: rgb(208, 254, 6);
+  color: #000000;
+  &:hover {
+    background-color: darken(rgb(208, 254, 6), 5%);
+  }
+}
+
+// Прогресс бар
+.progress {
+  border: 1px solid rgba(123, 135, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  background: rgba(210, 211, 232, 0.3);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  height: 16px;
+  width: 500px;
+  margin-top: 30px;
+  @media screen and (max-width: 767px) {
+    width: 280px;
+  }
+}
+textarea {
+  min-height: 170px;
+  color: rgba(10, 10, 12, 1) !important;
+
+  &::placeholder {
+    color: rgba(10, 10, 12, 0.5);
+  }
+}
+#step-6 {
+  margin-top: 144px;
+}
+#step-7 {
+  margin-top: 84px;
+  & input {
+    box-sizing: border-box;
+    border: 1px solid rgb(216, 219, 255);
+    width: 255px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgba(210, 211, 232, 0.3);
+  }
+}
+.progress-value {
+  animation: load 2.5s normal forwards;
+  border: 1px solid rgb(123, 135, 255);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(
+    135deg,
+    rgba(123, 135, 255, 0.6) 25%,
+    rgba(123, 135, 255, 0.3) 50%,
+    rgba(123, 135, 255, 0.6) 75%
+  );
+  background-size: 35px 16px;
+  height: 16px;
+  width: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.quiz__error {
+  color: rgba(211, 66, 66, 1);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Commissioner";
+  position: absolute;
+  bottom: 21px;
+  display: none;
+}
+#QuizPhoneMask {
+  font-weight: 500;
+}
+.fs-40 {
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+#step-7 .quiz__question {
+  margin-bottom: 36px;
+}
+.error-quiz {
+  color: rgba(211, 66, 66, 1);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Commissioner";
+  display: none;
+  margin-bottom: 10px;
+  gap: 5px;
+  align-items: center;
+}
+.error-quiz.show {
+  display: flex;
+}
+.errorInput-quiz {
+  border: 1px solid rgba(211, 66, 66, 1) !important;
+}
+#QuizPhoneMask.filled {
+  color: rgba(10, 10, 12, 1);
+  opacity: 1;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  position: relative;
+  &:hover {
+    .checkbox-circle {
+      border: 1px solid #7b87ff;
+    }
+  }
+}
+
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0; /* Скрыть стандартный радио-кнопку */
+}
+
+.custom-checkbox .checkbox-circle {
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 13px;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  border: 1px solid #babee3;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-circle {
+  border-color: #7b87ff;
+  background-color: #7b87ff;
+}
+
+.custom-checkbox input[type="checkbox"]:not(:checked) + .checkbox-circle:hover {
+  border-color: #7b87ff;
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-circle::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 25px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+.custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  position: relative;
+  &:hover {
+    .radio-circle {
+      border-color: #7b87ff;
+    }
+  }
+}
+
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0; /* Скрыть стандартную радио-кнопку */
+}
+
+.custom-radio .radio-circle {
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 13px;
+  border-radius: 50%; /* Сделаем круг */
+  border: 1px solid #babee3;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-circle {
+  border-color: #7b87ff;
+  border-width: 1.5px;
+  background-color: #ffffff;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #7b87ff;
+  transform: translate(-50%, -50%);
+}
+
+.custom-radio input[type="radio"]:not(:checked) + .radio-circle:hover {
+  border-color: #7b87ff;
+}

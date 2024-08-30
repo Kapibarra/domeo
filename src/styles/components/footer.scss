@@ -1,0 +1,144 @@
+.footer__wrapper {
+  border-top: 1px solid rgb(41, 41, 41);
+  padding-top: 36px;
+  padding-bottom: 50px;
+}
+
+.footer {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    max-width: 335px;
+  }
+  & .footer__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    & .footer__logo-title {
+      color: rgb(255, 255, 255);
+      font-family: "Commissioner";
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 17px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      & img {
+        margin-right: 7px;
+      }
+    }
+  }
+  & .footer__contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 43px;
+    & .contacts__items {
+      display: flex;
+      flex-direction: column;
+      & .phone {
+        color: rgb(255, 255, 255);
+        font-family: "Commissioner";
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: left;
+        text-decoration: none;
+        margin-bottom: 5px;
+      }
+      & .mail {
+        color: rgb(107, 107, 107);
+        font-family: "Commissioner";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: left;
+        text-decoration: none;
+      }
+    }
+  }
+  & .contacts__company-info {
+    color: rgb(86, 86, 86);
+    font-family: "Commissioner";
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 140%;
+    text-align: left;
+    margin-left: 292px;
+    @media screen and (max-width: 767px) {
+      margin-left: 0px;
+    }
+  }
+  & .footer__policy {
+    color: rgb(145, 145, 145);
+    font-family: "Commissioner";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 140%;
+    text-align: left;
+    margin-bottom: 31px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    & .custom-checkbox {
+      display: none;
+    }
+    .custom-checkbox + label {
+      position: relative;
+      cursor: pointer;
+      display: block;
+      width: 17px;
+      height: 16px;
+      border: 1px solid white;
+      border-radius: 4px;
+      margin-right: 11px;
+      margin-top: 3px;
+      background-color: transparent;
+    }
+    .custom-checkbox + label::before {
+      content: "";
+      position: absolute;
+      top: 46%;
+      left: 57%;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .custom-checkbox:checked + label::before {
+      opacity: 1;
+    }
+    .custom-checkbox + label:hover {
+      border-color: #ccc;
+    }
+    & p > a:visited {
+      color: rgb(145, 145, 145);
+    }
+    & p {
+      & a {
+        color: rgb(145, 145, 145);
+      }
+    }
+  }
+  & .footer__info {
+    color: rgb(123, 123, 123);
+    font-family: "Commissioner";
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 130%;
+    text-align: left;
+    & a {
+      color: rgb(123, 123, 123);
+    }
+    & a:visited {
+      color: rgb(123, 123, 123);
+    }
+  }
+}

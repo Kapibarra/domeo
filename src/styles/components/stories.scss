@@ -1,0 +1,136 @@
+.stories {
+  margin-top: 147px;
+  margin-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  & .stories__bg {
+    position: absolute;
+    top: -100px;
+    right: 300px;
+    @media screen and (max-width: 767px) {
+      top: -100px;
+      right: 70px;
+      z-index: -1;
+      max-width: 600px;
+      & img {
+        max-width: 600px;
+      }
+    }
+  }
+  & h2 {
+    max-width: 442px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 80px;
+  }
+  & .stories__swiper {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 978px;
+  }
+  & .stories__title {
+    color: rgb(180, 195, 216);
+    font-family: "Commissioner";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 135%;
+    margin-top: 24px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      max-width: 335px;
+      text-align: left;
+    }
+  }
+  & .stories__item {
+    width: 100%;
+    max-width: 292px;
+    position: relative;
+    & .item__banner video {
+      border-radius: 10.9px;
+    }
+    & .item__title {
+      position: absolute;
+      top: 355px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fffffc;
+      font-family: "Commissioner";
+      font-size: 22px;
+      font-weight: 600;
+      width: 190px;
+      line-height: 135%;
+      text-align: center;
+    }
+    & .item__play-btn {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.item__play-btn {
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+
+.item__play-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+/* Popup Styling */
+.popup {
+  display: none; /* Скрыт по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup__content {
+  position: relative;
+  z-index: 1001;
+}
+
+.popup__close {
+  position: absolute;
+  top: -21px;
+  right: -50px;
+  font-size: 56px;
+  cursor: pointer;
+  color: #fffffc;
+  @media screen and (max-width: 767px) {
+    top: -60px;
+    right: -10px;
+  }
+}
+
+video {
+  max-width: 100%;
+  max-width: 384px;
+  height: auto;
+  @media screen and (max-width: 767px) {
+    max-width: 335px;
+  }
+}

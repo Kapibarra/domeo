@@ -1,0 +1,138 @@
+/*Alice regular*/
+
+@font-face {
+  font-family: "Alice Regular";
+  src: url("../assets/fonts/alice_regular.eot");
+  src: url("../assets/fonts/alice_regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/alice_regular.woff2") format("woff2"),
+    url("../assets/fonts/alice_regular.woff") format("woff"),
+    url("../assets/fonts/alice_regular.ttf") format("truetype");
+}
+
+/*Commissioner*/
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-ExtraBold.eot");
+  src: local("../assets/fonts/Commissioner ExtraBold"),
+    local("../assets/fonts/Commissioner-ExtraBold"),
+    url("../assets/fonts/Commissioner-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-ExtraBold.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-ExtraBold.woff") format("woff"),
+    url("../assets/fonts/Commissioner-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-Light.eot");
+  src: local("../assets/fonts/Commissioner Light"),
+    local("../assets/fonts/Commissioner-Light"),
+    url("../assets/fonts/Commissioner-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-Light.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-Light.woff") format("woff"),
+    url("../assets/fonts/Commissioner-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-Bold.eot");
+  src: local("../assets/fonts/Commissioner Bold"),
+    local("../assets/fonts/Commissioner-Bold"),
+    url("../assets/fonts/Commissioner-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-Bold.woff") format("woff"),
+    url("../assets/fonts/Commissioner-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-Medium.eot");
+  src: local("../assets/fonts/Commissioner Medium"),
+    local("../assets/fonts/Commissioner-Medium"),
+    url("../assets/fonts/Commissioner-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-Medium.woff") format("woff"),
+    url("../assets/fonts/Commissioner-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-ExtraLight.eot");
+  src: local("../assets/fonts/Commissioner ExtraLight"),
+    local("../assets/fonts/Commissioner-ExtraLight"),
+    url("../assets/fonts/Commissioner-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-ExtraLight.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-ExtraLight.woff") format("woff"),
+    url("../assets/fonts/Commissioner-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-Black.eot");
+  src: local("../assets/fonts/Commissioner Black"),
+    local("../assets/fonts/Commissioner-Black"),
+    url("../assets/fonts/Commissioner-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-Black.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-Black.woff") format("woff"),
+    url("../assets/fonts/Commissioner-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-Regular.eot");
+  src: local("../assets/fonts/Commissioner Regular"),
+    local("../assets/fonts/Commissioner-Regular"),
+    url("../assets/fonts/Commissioner-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-Regular.woff") format("woff"),
+    url("../assets/fonts/Commissioner-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-SemiBold.eot");
+  src: local("../assets/fonts/Commissioner SemiBold"),
+    local("../assets/fonts/Commissioner-SemiBold"),
+    url("../assets/fonts/Commissioner-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-SemiBold.woff") format("woff"),
+    url("../assets/fonts/Commissioner-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner-Thin.ttf");
+  src: local("../assets/fonts/Commissioner Thin"),
+    local("../assets/fonts/Commissioner-Thin"),
+    url("../assets/fonts/Commissioner-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Commissioner-Thin.woff2") format("woff2"),
+    url("../assets/fonts/Commissioner-Thin.woff") format("woff"),
+    url("../assets/fonts/Commissioner-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}

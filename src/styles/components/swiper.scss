@@ -1,0 +1,138 @@
+.swiper-slide-prev {
+  opacity: 0.25 !important;
+  transition: opacity 0.3s ease;
+}
+.swiper-slide-active {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
+}
+.swiper-slide-next {
+  opacity: 0.25 !important;
+  transition: opacity 0.3s ease;
+}
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.08;
+  transition: opacity 0.3s ease;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.no-fade.swiper-slide-next {
+  opacity: 0.5 !important;
+}
+.no-fade > swiper-slide {
+  opacity: 1 !important;
+}
+/*thumb*/
+.slider__thumb-wrapper swiper-slide {
+  cursor: default !important;
+}
+@media screen and (max-width: 767px) {
+  .slider__thumb-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 55px;
+
+    & swiper-slide {
+      transition: all 0.35s ease;
+    }
+    & .swiper-slide-active {
+      transition: opacity 0.3s ease;
+      width: 138px !important;
+    }
+  }
+}
+/* scale */
+.bots {
+  & .swiper-slide-prev {
+    transform: scale(0.7);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    opacity: 0.7;
+    padding-right: 60px;
+  }
+  & .swiper-slide-next {
+    transform: scale(0.7);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    opacity: 0.7;
+    padding-left: 60px;
+  }
+
+  & .swiper-slide-active {
+    transform: scale(1);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    opacity: 1;
+    & .bots__item {
+      & .bots__item-image {
+        cursor: zoom-in;
+      }
+    }
+  }
+  .swiper ::slotted(swiper-slide) {
+    overflow: visible !important;
+  }
+  & swiper-slide {
+    transform: scale(0.7);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    overflow: visible !important;
+  }
+  @media screen and (max-width: 1920px) {
+    & .swiper-slide-prev {
+      padding-right: 115px;
+    }
+    & .swiper-slide-next {
+      padding-left: 115px;
+    }
+  }
+  @media screen and (max-width: 1580px) {
+    & .swiper-slide-prev {
+      padding-right: 60px;
+    }
+    & .swiper-slide-next {
+      padding-left: 60px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    & .swiper-slide-prev {
+      padding-right: 0px;
+      transform: scale(0.98);
+    }
+    & .swiper-slide-next {
+      padding-left: 0px;
+      transform: scale(0.98);
+    }
+    & swiper-slide {
+      transform: scale(0.98);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    & .swiper-slide-prev,
+    & .swiper-slide-next {
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 428px) {
+    & .swiper-slide-prev,
+    & .swiper-slide-next {
+      opacity: 0;
+    }
+  }
+}
+
+/*stories*/
+
+.stories__swiper
+  > .swiper-slide-active
+  > .stories__item
+  > .item__banner
+  > video {
+}
